@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,20 @@ namespace Individual_Project
     /// </summary>
     public partial class MainWindow : Window
     {
+        ObservableCollection<Entry> Entries = new ObservableCollection<Entry>();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
