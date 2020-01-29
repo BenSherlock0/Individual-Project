@@ -26,5 +26,10 @@ namespace Individual_Project
             Num2 = num2;
             Num3 = num3;
         }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName} {Num1}:{Num2}:{Num3}";
+        }
     }
 }

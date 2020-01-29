@@ -29,12 +29,23 @@ namespace Individual_Project
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            lbxEntries.ItemsSource = Entries;
 
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            string First = tbxFirst.Text;
+            string Last = tbxLast.Text;
+            int num1 = int.Parse(tbxNum1.Text);
+            int num2 = int.Parse(tbxNum2.Text);
+            int num3 = int.Parse(tbxNum3.Text);
 
+
+
+            Entry E1 = new Entry(First, Last, num1, num2, num3);
+
+            Entries.Add(E1);
         }
     }
 }
