@@ -11,7 +11,7 @@
         <TextBox x:Name="tbxFirst" HorizontalAlignment="Left" Height="23" Margin="584,68,0,0" TextWrapping="Wrap" Text="Paul" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tbxLast" HorizontalAlignment="Left" Height="24" Margin="584,139,0,0" TextWrapping="Wrap" Text="Sherlock" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="344,262,0,0" TextWrapping="Wrap" Text="66" VerticalAlignment="Top" Height="76" Width="80" FontSize="36" TextAlignment="Center"/>
-        <Button Content="Submit" HorizontalAlignment="Left" Margin="350,356,0,0" VerticalAlignment="Top" Width="74"/>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="344,343,0,0" VerticalAlignment="Top" Width="74"/>
         <Label Content="Entries" HorizontalAlignment="Left" Margin="62,25,0,0" VerticalAlignment="Top"/>
         <Label Content="First Name" HorizontalAlignment="Left" Margin="506,68,0,0" VerticalAlignment="Top" Height="23"/>
         <Label Content="Last Name" HorizontalAlignment="Left" Margin="506,139,0,0" VerticalAlignment="Top" Height="24" Width="67"/>
