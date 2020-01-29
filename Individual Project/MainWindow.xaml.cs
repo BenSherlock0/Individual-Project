@@ -22,6 +22,8 @@ namespace Individual_Project
     public partial class MainWindow : Window
     {
         ObservableCollection<Entry> Entries = new ObservableCollection<Entry>();
+
+        Random rng = new Random();
         public MainWindow()
         {
             InitializeComponent();
@@ -41,11 +43,21 @@ namespace Individual_Project
             int num2 = int.Parse(tbxNum2.Text);
             int num3 = int.Parse(tbxNum3.Text);
 
-
-
             Entry E1 = new Entry(First, Last, num1, num2, num3);
 
             Entries.Add(E1);
+        }
+
+        private void btnWinners_Click(object sender, RoutedEventArgs e)
+        {
+            int WinNum1 = rng.Next(1,30);
+            int WinNum2 = rng.Next(1, 30);
+            int WinNum3 = rng.Next(1, 30);
+
+            tblkWinNum1.Text = WinNum1.ToString();
+            tblkWinNum2.Text = WinNum2.ToString();
+            tblkWinNum3.Text = WinNum3.ToString();
+
         }
     }
 }
