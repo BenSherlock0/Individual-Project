@@ -19,7 +19,7 @@
         <Label Content="Number 3:" HorizontalAlignment="Left" Margin="257,232,0,0" VerticalAlignment="Top" Width="67" Height="23" RenderTransformOrigin="0.571,-0.435"/>
         <TextBox x:Name="tbxNum1" HorizontalAlignment="Left" Height="23" Margin="366,158,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tbxNum2" HorizontalAlignment="Left" Height="23" Margin="366,193,0,0" TextWrapping="Wrap" Text="13" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbxNum3" HorizontalAlignment="Left" Height="23" Margin="366,232,0,0" TextWrapping="Wrap" Text="33" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxNum3" HorizontalAlignment="Left" Height="23" Margin="366,232,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="120"/>
         <TextBlock x:Name="tblkWinNum1" HorizontalAlignment="Left" Margin="531,68,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="39" FontSize="24"/>
         <TextBlock x:Name="tblkWinNum2" HorizontalAlignment="Left" Margin="617,68,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Height="39" FontSize="24"/>
         <TextBlock x:Name="tblkWinNum3" HorizontalAlignment="Left" Margin="695,68,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Height="39" FontSize="24"/>

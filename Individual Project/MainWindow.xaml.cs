@@ -22,6 +22,7 @@ namespace Individual_Project
     public partial class MainWindow : Window
     {
         ObservableCollection<Entry> Entries = new ObservableCollection<Entry>();
+        ObservableCollection<Entry> Winners = new ObservableCollection<Entry>();
 
         Random rng = new Random();
         public MainWindow()
@@ -32,32 +33,79 @@ namespace Individual_Project
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             lbxEntries.ItemsSource = Entries;
+            lbxWinners.ItemsSource = Winners;
 
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            string First = tbxFirst.Text;
-            string Last = tbxLast.Text;
-            int num1 = int.Parse(tbxNum1.Text);
-            int num2 = int.Parse(tbxNum2.Text);
-            int num3 = int.Parse(tbxNum3.Text);
+            try
+            {
+                bool copy = false;
 
-            Entry E1 = new Entry(First, Last, num1, num2, num3);
+                string First = tbxFirst.Text;
+                string Last = tbxLast.Text;
 
-            Entries.Add(E1);
+                int num1 = int.Parse(tbxNum1.Text);
+                int num2 = int.Parse(tbxNum2.Text);
+                int num3 = int.Parse(tbxNum3.Text);
+
+                if(num1 == num2 || num1 == num3 || num3 == num2)
+                {
+                    copy = true;
+                }
+
+                if (copy == false)
+                {
+                    Entry E1 = new Entry(First, Last, num1, num2, num3);
+                    Entries.Add(E1);
+                }
+                else
+                {
+                    MessageBox.Show("No duplicates please.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please enter number values into the number boxes");
+            }
         }
 
         private void btnWinners_Click(object sender, RoutedEventArgs e)
         {
-            int WinNum1 = rng.Next(1,30);
-            int WinNum2 = rng.Next(1, 30);
-            int WinNum3 = rng.Next(1, 30);
+            int WinNum1;
+            int WinNum2;
+            int WinNum3;
+
+            WinNum1 = rng.Next(1,30);
+            do
+            {
+                WinNum2 = rng.Next(1, 30);
+            } while (WinNum2 == WinNum1);
+
+            do
+            {
+                WinNum3 = rng.Next(1, 30);
+            } while (WinNum3 == WinNum1 && WinNum3 == WinNum2);
+
 
             tblkWinNum1.Text = WinNum1.ToString();
             tblkWinNum2.Text = WinNum2.ToString();
             tblkWinNum3.Text = WinNum3.ToString();
 
+            foreach(Entry entry in Entries)
+            {
+                if(entry.Num1 == WinNum1 || entry.Num1 == WinNum2 || entry.Num1 == WinNum3)
+                {
+                    if (entry.Num2 == WinNum1 || entry.Num2 == WinNum2 || entry.Num2 == WinNum3)
+                    {
+                        if (entry.Num3 == WinNum1 || entry.Num3 == WinNum2 || entry.Num3 == WinNum3)
+                        {
+                            Winners.Add(entry);
+                        }
+                    }
+                }
+            }
         }
     }
 }
