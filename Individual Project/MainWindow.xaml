@@ -1,0 +1,20 @@
+﻿<Window x:Class="Individual_Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Individual_Project"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox HorizontalAlignment="Left" Height="270" Margin="62,68,0,0" VerticalAlignment="Top" Width="157"/>
+        <TextBox x:Name="tbxFirst" HorizontalAlignment="Left" Height="23" Margin="584,68,0,0" TextWrapping="Wrap" Text="Paul" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxLast" HorizontalAlignment="Left" Height="24" Margin="584,139,0,0" TextWrapping="Wrap" Text="Sherlock" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="344,262,0,0" TextWrapping="Wrap" Text="66" VerticalAlignment="Top" Height="76" Width="80" FontSize="36" TextAlignment="Center"/>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="350,356,0,0" VerticalAlignment="Top" Width="74"/>
+        <Label Content="Entries" HorizontalAlignment="Left" Margin="62,25,0,0" VerticalAlignment="Top"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="506,68,0,0" VerticalAlignment="Top" Height="23"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="506,139,0,0" VerticalAlignment="Top" Height="24" Width="67"/>
+
+    </Grid>
+</Window>
