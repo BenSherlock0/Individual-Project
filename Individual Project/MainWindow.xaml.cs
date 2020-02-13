@@ -77,16 +77,16 @@ namespace Individual_Project
             int WinNum2;
             int WinNum3;
 
-            WinNum1 = rng.Next(1,30);
+            WinNum1 = rng.Next(1, 31);
             do
             {
-                WinNum2 = rng.Next(1, 30);
+                WinNum2 = rng.Next(1, 31);
             } while (WinNum2 == WinNum1);
 
             do
             {
-                WinNum3 = rng.Next(1, 30);
-            } while (WinNum3 == WinNum1 && WinNum3 == WinNum2);
+                WinNum3 = rng.Next(1, 31);
+            } while (WinNum3 == WinNum1 || WinNum3 == WinNum2);
 
 
             tblkWinNum1.Text = WinNum1.ToString();
