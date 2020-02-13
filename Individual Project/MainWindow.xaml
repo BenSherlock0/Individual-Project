@@ -6,27 +6,46 @@
         xmlns:local="clr-namespace:Individual_Project"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
-    <Grid>
-        <ListBox x:Name="lbxEntries" HorizontalAlignment="Left" Height="270" Margin="62,68,0,0" VerticalAlignment="Top" Width="157"/>
-        <TextBox x:Name="tbxFirst" HorizontalAlignment="Left" Height="23" Margin="366,68,0,0" TextWrapping="Wrap" Text="Paul" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbxLast" HorizontalAlignment="Left" Height="24" Margin="366,111,0,0" TextWrapping="Wrap" Text="Sherlock" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="366,277,0,0" VerticalAlignment="Top" Width="74" Click="btnSubmit_Click"/>
-        <Label Content="Entries" HorizontalAlignment="Left" Margin="62,25,0,0" VerticalAlignment="Top"/>
-        <Label Content="First Name:" HorizontalAlignment="Left" Margin="257,68,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
-        <Label Content="Last Name:" HorizontalAlignment="Left" Margin="257,111,0,0" VerticalAlignment="Top" Height="24" Width="67"/>
-        <Label Content="Number 1:" HorizontalAlignment="Left" Margin="257,158,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
-        <Label Content="Number 2:" HorizontalAlignment="Left" Margin="257,193,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
-        <Label Content="Number 3:" HorizontalAlignment="Left" Margin="257,232,0,0" VerticalAlignment="Top" Width="67" Height="23" RenderTransformOrigin="0.571,-0.435"/>
-        <TextBox x:Name="tbxNum1" HorizontalAlignment="Left" Height="23" Margin="366,158,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbxNum2" HorizontalAlignment="Left" Height="23" Margin="366,193,0,0" TextWrapping="Wrap" Text="13" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbxNum3" HorizontalAlignment="Left" Height="23" Margin="366,232,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="tblkWinNum1" HorizontalAlignment="Left" Margin="531,68,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="39" FontSize="24"/>
-        <TextBlock x:Name="tblkWinNum2" HorizontalAlignment="Left" Margin="617,68,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Height="39" FontSize="24"/>
-        <TextBlock x:Name="tblkWinNum3" HorizontalAlignment="Left" Margin="695,68,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Height="39" FontSize="24"/>
-        <Label Content="Winning Numbers" HorizontalAlignment="Left" Margin="592,25,0,0" VerticalAlignment="Top"/>
-        <Label Content="Winners" HorizontalAlignment="Left" Margin="601,189,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="lbxWinners" HorizontalAlignment="Left" Height="145" Margin="531,232,0,0" VerticalAlignment="Top" Width="213"/>
-        <Button x:Name="btnWinners" Content="Show Winners" HorizontalAlignment="Left" Margin="592,143,0,0" VerticalAlignment="Top" Width="75" Click="btnWinners_Click"/>
+    <TabControl TabStripPlacement="Top">
+        <TabItem Name="entries" Header="Entries" Width="60">
 
-    </Grid>
+            <Grid>
+                <ListBox x:Name="lbxEntries" HorizontalAlignment="Left" Height="270" Margin="62,68,0,0" VerticalAlignment="Top" Width="157"/>
+                <TextBox x:Name="tbxFirst" HorizontalAlignment="Left" Height="23" Margin="366,68,0,0" TextWrapping="Wrap" Text="Paul" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="tbxLast" HorizontalAlignment="Left" Height="24" Margin="366,111,0,0" TextWrapping="Wrap" Text="Sherlock" VerticalAlignment="Top" Width="120"/>
+                <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="366,277,0,0" VerticalAlignment="Top" Width="74" Click="btnSubmit_Click"/>
+                <Label Content="Entries" HorizontalAlignment="Left" Margin="62,25,0,0" VerticalAlignment="Top"/>
+                <Label Content="First Name:" HorizontalAlignment="Left" Margin="257,68,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
+                <Label Content="Last Name:" HorizontalAlignment="Left" Margin="257,111,0,0" VerticalAlignment="Top" Height="24" Width="67"/>
+                <Label Content="Number 1:" HorizontalAlignment="Left" Margin="257,158,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
+                <Label Content="Number 2:" HorizontalAlignment="Left" Margin="257,193,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
+                <Label Content="Number 3:" HorizontalAlignment="Left" Margin="257,232,0,0" VerticalAlignment="Top" Width="67" Height="23" RenderTransformOrigin="0.571,-0.435"/>
+                <TextBox x:Name="tbxNum1" HorizontalAlignment="Left" Height="23" Margin="366,158,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="tbxNum2" HorizontalAlignment="Left" Height="23" Margin="366,193,0,0" TextWrapping="Wrap" Text="13" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="tbxNum3" HorizontalAlignment="Left" Height="23" Margin="366,232,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="120"/>
+                <!--<TextBlock x:Name="tblkWinNum1" HorizontalAlignment="Left" Margin="531,68,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="39" FontSize="24"/>
+                <TextBlock x:Name="tblkWinNum2" HorizontalAlignment="Left" Margin="617,68,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Height="39" FontSize="24"/>
+                <TextBlock x:Name="tblkWinNum3" HorizontalAlignment="Left" Margin="695,68,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Height="39" FontSize="24"/>
+                <Label Content="Winning Numbers" HorizontalAlignment="Left" Margin="592,25,0,0" VerticalAlignment="Top"/>
+                <Label Content="Winners" HorizontalAlignment="Left" Margin="601,189,0,0" VerticalAlignment="Top"/>
+                <ListBox x:Name="lbxWinners" HorizontalAlignment="Left" Height="145" Margin="531,232,0,0" VerticalAlignment="Top" Width="213"/>
+                <Button x:Name="btnWinners" Content="Show Winners" HorizontalAlignment="Left" Margin="592,143,0,0" VerticalAlignment="Top" Width="75" Click="btnWinners_Click"/>-->
+
+            </Grid>
+        </TabItem>
+
+        <TabItem Name="winners" Header="Winners" Width="60">
+            <Grid>
+                <Label Content="Winners" HorizontalAlignment="Left" Margin="342,32,0,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="tblkWinNum1" HorizontalAlignment="Left" Margin="531,68,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="39" FontSize="24"/>
+                <TextBlock x:Name="tblkWinNum2" HorizontalAlignment="Left" Margin="617,68,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Height="39" FontSize="24"/>
+                <TextBlock x:Name="tblkWinNum3" HorizontalAlignment="Left" Margin="695,68,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Height="39" FontSize="24"/>
+                <Label Content="Winning Numbers" HorizontalAlignment="Left" Margin="592,25,0,0" VerticalAlignment="Top"/>
+                <Label Content="Winners" HorizontalAlignment="Left" Margin="601,189,0,0" VerticalAlignment="Top"/>
+                <ListBox x:Name="lbxWinners" HorizontalAlignment="Left" Height="145" Margin="531,232,0,0" VerticalAlignment="Top" Width="213"/>
+                <Button x:Name="btnWinners" Content="Show Winners" HorizontalAlignment="Left" Margin="592,143,0,0" VerticalAlignment="Top" Width="75" Click="btnWinners_Click"/>
+
+            </Grid>
+        </TabItem>
+    </TabControl>
 </Window>
