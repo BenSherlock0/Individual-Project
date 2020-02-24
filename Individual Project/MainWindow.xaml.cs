@@ -107,5 +107,12 @@ namespace Individual_Project
                 }
             }
         }
+
+        private void LbxEntries_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Entry selectedentry = lbxEntries.SelectedItem as Entry;
+
+            txtblkDetails.Text = $"First Name:{selectedentry.FirstName}  \nLast Name:{selectedentry.LastName}"; //Show details
+        }
     }
 }
