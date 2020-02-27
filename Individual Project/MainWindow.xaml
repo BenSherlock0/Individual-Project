@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <TabControl TabStripPlacement="Top">
-        <TabItem Name="submit" Header="Submit" Width="60">
+        <TabItem Name="AddUser" Header="Add User" Width="80">
 
             <Grid>
 
@@ -16,12 +16,7 @@
                 <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="94,352,0,0" VerticalAlignment="Top" Width="74" Click="btnSubmit_Click"/>
                 <Label Content="First Name:" HorizontalAlignment="Left" Margin="34,68,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
                 <Label Content="Last Name:" HorizontalAlignment="Left" Margin="34,111,0,0" VerticalAlignment="Top" Height="24" Width="67"/>
-                <Label Content="Number 1:" HorizontalAlignment="Left" Margin="496,131,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
-                <Label Content="Number 2:" HorizontalAlignment="Left" Margin="496,179,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
-                <Label Content="Number 3:" HorizontalAlignment="Left" Margin="496,232,0,0" VerticalAlignment="Top" Width="67" Height="23" RenderTransformOrigin="0.571,-0.435"/>
-                <TextBox x:Name="tbxNum1" HorizontalAlignment="Left" Height="23" Margin="589,131,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tbxNum2" HorizontalAlignment="Left" Height="23" Margin="589,179,0,0" TextWrapping="Wrap" Text="13" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tbxNum3" HorizontalAlignment="Left" Height="23" Margin="589,232,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="120"/>
+
                 <TextBox x:Name="tbxTelephone" HorizontalAlignment="Left" Height="23" Margin="165,158,0,0" TextWrapping="Wrap" Text="0835469032" VerticalAlignment="Top" Width="120"/>
                 <TextBox x:Name="tbxStreet" HorizontalAlignment="Left" Height="23" Margin="165,193,0,0" TextWrapping="Wrap" Text="Fake Street" VerticalAlignment="Top" Width="120"/>
                 <TextBox x:Name="tbxTown" HorizontalAlignment="Left" Height="23" Margin="165,232,0,0" TextWrapping="Wrap" Text="Ballymote" VerticalAlignment="Top" Width="120"/>
@@ -30,6 +25,8 @@
                 <Label Content="Street" HorizontalAlignment="Left" Margin="34,193,0,0" VerticalAlignment="Top" Height="23" Width="63"/>
                 <Label Content="Town" HorizontalAlignment="Left" Margin="34,232,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
                 <Label Content="County" HorizontalAlignment="Left" Margin="34,277,0,0" VerticalAlignment="Top" Height="33" Width="67"/>
+                <Label Content="Add User" HorizontalAlignment="Left" Margin="34,19,0,0" VerticalAlignment="Top"/>
+
                 <!--<TextBlock x:Name="tblkWinNum1" HorizontalAlignment="Left" Margin="531,68,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="39" FontSize="24"/>
                 <TextBlock x:Name="tblkWinNum2" HorizontalAlignment="Left" Margin="617,68,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Height="39" FontSize="24"/>
                 <TextBlock x:Name="tblkWinNum3" HorizontalAlignment="Left" Margin="695,68,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Height="39" FontSize="24"/>
@@ -41,7 +38,24 @@
             </Grid>
         </TabItem>
 
-        <TabItem Name="winners" Header="Winners" Width="60">
+        <TabItem Name="addTicket" Header="Add Ticket" Width="80">
+            <Grid>
+                <ComboBox x:Name="combxUser" HorizontalAlignment="Left" Margin="35,77,0,0" VerticalAlignment="Top" Width="120"/>
+                <Label Content="User Select" HorizontalAlignment="Left" Margin="35,29,0,0" VerticalAlignment="Top"/>
+
+                <Label Content="Number 1:" HorizontalAlignment="Left" Margin="214,76,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
+                <Label Content="Number 2:" HorizontalAlignment="Left" Margin="214,121,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
+                <Label Content="Number 3:" HorizontalAlignment="Left" Margin="214,162,0,0" VerticalAlignment="Top" Width="67" Height="23" RenderTransformOrigin="0.571,-0.435"/>
+                <TextBox x:Name="tbxNum1" HorizontalAlignment="Left" Height="23" Margin="353,76,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="tbxNum2" HorizontalAlignment="Left" Height="23" Margin="353,121,0,0" TextWrapping="Wrap" Text="13" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.467,0.435"/>
+                <TextBox x:Name="tbxNum3" HorizontalAlignment="Left" Height="23" Margin="353,162,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="120"/>
+                <ListBox x:Name="lbxTickets" HorizontalAlignment="Left" Height="288" Margin="511,76,0,0" VerticalAlignment="Top" Width="184"/>
+                <Label Content="List of Tickets" HorizontalAlignment="Left" Margin="511,37,0,0" VerticalAlignment="Top"/>
+
+            </Grid>
+        </TabItem>
+
+        <TabItem Name="winners" Header="Winners" Width="80">
             <Grid>
                 <TextBlock x:Name="tblkWinNum1" HorizontalAlignment="Left" Margin="312,124,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="39" FontSize="24"/>
                 <TextBlock x:Name="tblkWinNum2" HorizontalAlignment="Left" Margin="366,124,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Height="39" FontSize="24"/>
@@ -54,7 +68,7 @@
             </Grid>
         </TabItem>
 
-        <TabItem Name="entries" Header="Entries" Width="60">
+        <TabItem Name="details" Header="User Details" Width="80">
             <Grid>
                 <ListBox x:Name="lbxEntries" HorizontalAlignment="Left" Height="270" Margin="62,68,0,0" VerticalAlignment="Top" Width="157" SelectionChanged="LbxEntries_SelectionChanged"/>
                 <TextBlock x:Name="txtblkDetails" HorizontalAlignment="Left" Height="270" Margin="340,68,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="359"/>

@@ -21,6 +21,7 @@ namespace Individual_Project
     /// </summary>
     public partial class MainWindow : Window
     {
+        ObservableCollection<User> Users = new ObservableCollection<User>();
         ObservableCollection<Entry> Entries = new ObservableCollection<Entry>();
         ObservableCollection<Entry> Winners = new ObservableCollection<Entry>();
 
@@ -32,9 +33,15 @@ namespace Individual_Project
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            lbxEntries.ItemsSource = Entries;
-            lbxWinners.ItemsSource = Winners;
+            User R1 = new User("Ben", "Casey", "0867528511", "Main Street", "Gurteen", "Sligo");
+            User R2 = new User("Patrick", "Kelly", "0845674321", "Main Street", "Ballaghaderreen", "Roscommon");
+            Users.Add(R1);
+            Users.Add(R2);
 
+            lbxEntries.ItemsSource = Users;
+            lbxWinners.ItemsSource = Winners;
+            combxUser.ItemsSource = Users;
+            
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -51,19 +58,20 @@ namespace Individual_Project
                 string city = tbxTown.Text;
                 string county = tbxCounty.Text;
 
-                int num1 = int.Parse(tbxNum1.Text);
-                int num2 = int.Parse(tbxNum2.Text);
-                int num3 = int.Parse(tbxNum3.Text);
+                //int num1 = int.Parse(tbxNum1.Text);
+                //int num2 = int.Parse(tbxNum2.Text);
+                //int num3 = int.Parse(tbxNum3.Text);
 
-                if(num1 == num2 || num1 == num3 || num3 == num2)
-                {
-                    copy = true;
-                }
+                //if(num1 == num2 || num1 == num3 || num3 == num2)
+                //{
+                //    copy = true;
+                //}
 
                 if (copy == false)
                 {
-                    Entry E1 = new Entry(First, Last,phone,street,town,county, num1, num2, num3);
-                    Entries.Add(E1);
+                    //User E1 = new User(First, Last,phone,street,town,county, num1, num2, num3);
+                    User E1 = new User(First, Last, phone, street, town, county);
+                    Users.Add(E1);
                 }
                 else
                 {
@@ -115,7 +123,7 @@ namespace Individual_Project
 
         private void LbxEntries_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Entry selectedentry = lbxEntries.SelectedItem as Entry;
+            User selectedentry = lbxEntries.SelectedItem as User;
 
             txtblkDetails.Text = $"First Name: {selectedentry.FirstName}  \nLast Name: {selectedentry.LastName} \n" +
                 $"Phone No: {selectedentry.PhoneNo} \nStreet: {selectedentry.Street} \nTown: {selectedentry.Town} \nCounty: {selectedentry.County}"; //Show details
