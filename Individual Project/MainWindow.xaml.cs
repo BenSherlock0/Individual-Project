@@ -45,6 +45,11 @@ namespace Individual_Project
 
                 string First = tbxFirst.Text;
                 string Last = tbxLast.Text;
+                string phone = tbxTelephone.Text;
+                string street = tbxStreet.Text;
+                string town = tbxTown.Text;
+                string city = tbxTown.Text;
+                string county = tbxCounty.Text;
 
                 int num1 = int.Parse(tbxNum1.Text);
                 int num2 = int.Parse(tbxNum2.Text);
@@ -57,7 +62,7 @@ namespace Individual_Project
 
                 if (copy == false)
                 {
-                    Entry E1 = new Entry(First, Last, num1, num2, num3);
+                    Entry E1 = new Entry(First, Last,phone,street,town,county, num1, num2, num3);
                     Entries.Add(E1);
                 }
                 else
@@ -112,7 +117,8 @@ namespace Individual_Project
         {
             Entry selectedentry = lbxEntries.SelectedItem as Entry;
 
-            txtblkDetails.Text = $"First Name:{selectedentry.FirstName}  \nLast Name:{selectedentry.LastName}"; //Show details
+            txtblkDetails.Text = $"First Name: {selectedentry.FirstName}  \nLast Name: {selectedentry.LastName} \n" +
+                $"Phone No: {selectedentry.PhoneNo} \nStreet: {selectedentry.Street} \nTown: {selectedentry.Town} \nCounty: {selectedentry.County}"; //Show details
         }
     }
 }
