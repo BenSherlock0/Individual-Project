@@ -26,7 +26,7 @@ namespace Individual_Project
         public override string ToString()
         {
             //return $"{FirstName} {LastName} {UserEntry.Num1}:{UserEntry.Num2}:{UserEntry.Num3}";
-            return $"{Num1}:{Num2}:{Num3}:{Date}";
+            return $"{Num1}:{Num2}:{Num3}   {Date.ToShortDateString()}";
         }
 
 

@@ -41,7 +41,9 @@ namespace Individual_Project
             lbxEntries.ItemsSource = Users;
             lbxWinners.ItemsSource = Winners;
             combxUser.ItemsSource = Users;
-            
+            lbxTickets.ItemsSource = Entries;
+
+
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -127,6 +129,25 @@ namespace Individual_Project
 
             txtblkDetails.Text = $"First Name: {selectedentry.FirstName}  \nLast Name: {selectedentry.LastName} \n" +
                 $"Phone No: {selectedentry.PhoneNo} \nStreet: {selectedentry.Street} \nTown: {selectedentry.Town} \nCounty: {selectedentry.County}"; //Show details
+        }
+
+        private void btnNums_Click(object sender, RoutedEventArgs e)
+        {
+            string num;
+
+            num = tbxNum1.Text;
+            int num1 = Convert.ToInt32(num);
+
+            num = tbxNum2.Text;
+            int num2 = Convert.ToInt32(num);
+
+            num = tbxNum1.Text;
+            int num3 = Convert.ToInt32(num);
+
+            Entry E1 = new Entry(num1, num2, num3, DateTime.Now);
+
+            Entries.Add(E1);
+
         }
     }
 }
