@@ -33,10 +33,10 @@ namespace Individual_Project
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            User R1 = new User("Ben", "Casey", "0867528511", "Main Street", "Gurteen", "Sligo");
-            User R2 = new User("Patrick", "Kelly", "0845674321", "Main Street", "Ballaghaderreen", "Roscommon");
-            Users.Add(R1);
-            Users.Add(R2);
+            User U1 = new User("Ben", "Casey", "0867528511", "Main Street", "Gurteen", "Sligo");
+            User U2 = new User("Patrick", "Kelly", "0845674321", "Main Street", "Ballaghaderreen", "Roscommon");
+            Users.Add(U1);
+            Users.Add(U2);
 
             lbxEntries.ItemsSource = Users;
             lbxWinners.ItemsSource = Winners;
@@ -50,7 +50,6 @@ namespace Individual_Project
         {
             try
             {
-                bool copy = false;
 
                 string First = tbxFirst.Text;
                 string Last = tbxLast.Text;
@@ -60,29 +59,14 @@ namespace Individual_Project
                 string city = tbxTown.Text;
                 string county = tbxCounty.Text;
 
-                //int num1 = int.Parse(tbxNum1.Text);
-                //int num2 = int.Parse(tbxNum2.Text);
-                //int num3 = int.Parse(tbxNum3.Text);
+                User U1 = new User(First, Last, phone, street, town, county);
+                Users.Add(U1);
 
-                //if(num1 == num2 || num1 == num3 || num3 == num2)
-                //{
-                //    copy = true;
-                //}
 
-                if (copy == false)
-                {
-                    //User E1 = new User(First, Last,phone,street,town,county, num1, num2, num3);
-                    User E1 = new User(First, Last, phone, street, town, county);
-                    Users.Add(E1);
-                }
-                else
-                {
-                    MessageBox.Show("No duplicates please.");
-                }
             }
             catch
             {
-                MessageBox.Show("Please enter number values into the number boxes");
+                
             }
         }
 
@@ -134,19 +118,40 @@ namespace Individual_Project
         private void btnNums_Click(object sender, RoutedEventArgs e)
         {
             string num;
+            bool copy = false;
 
-            num = tbxNum1.Text;
-            int num1 = Convert.ToInt32(num);
+            try
+            {
+                num = tbxNum1.Text;
+                int num1 = Convert.ToInt32(num);
 
-            num = tbxNum2.Text;
-            int num2 = Convert.ToInt32(num);
+                num = tbxNum2.Text;
+                int num2 = Convert.ToInt32(num);
 
-            num = tbxNum3.Text;
-            int num3 = Convert.ToInt32(num);
+                num = tbxNum3.Text;
+                int num3 = Convert.ToInt32(num);
 
-            Entry E1 = new Entry(num1, num2, num3, DateTime.Now);
 
-            Entries.Add(E1);
+                if (num1 == num2 || num1 == num3 || num3 == num2)
+                {
+                    copy = true;
+                }
+
+                if (copy == false)
+                {
+                    Entry E1 = new Entry(num1, num2, num3, DateTime.Now);
+                    Entries.Add(E1);
+                }
+                else
+                {
+                    MessageBox.Show("No duplicates please.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please enter number values into the number boxes");
+            }
+            
 
         }
     }

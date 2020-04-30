@@ -74,16 +74,16 @@
 
                 <Label Grid.Row="0" Grid.Column="1" Content="Pick Your Numbers" Margin="0,25,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Height="25"/>
 
-                <Label Grid.Row="0" Grid.Column="1"  Content="Number 1:" HorizontalAlignment="Left" Margin="0,70,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
-                <TextBox Grid.Row="0" Grid.Column="1" x:Name="tbxNum1" HorizontalAlignment="Left" Height="23" Margin="100,70,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="120"/>
+                <Label Grid.Row="0" Grid.Column="1"  Content="Number 1:" HorizontalAlignment="Left" Margin="0,70,0,0" VerticalAlignment="Top" Width="70" Height="25"/>
+                <TextBox Grid.Row="0" Grid.Column="1" x:Name="tbxNum1" HorizontalAlignment="Left" Height="25" Margin="100,70,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="120"/>
 
 
-                <Label Grid.Row="1" Grid.Column="1" Content="Number 2:" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
-                <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbxNum2" HorizontalAlignment="Left" Height="23" Margin="100,10,0,0" TextWrapping="Wrap" Text="13" VerticalAlignment="Top" Width="120"/>
+                <Label Grid.Row="1" Grid.Column="1" Content="Number 2:" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="70" Height="25"/>
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbxNum2" HorizontalAlignment="Left" Height="25" Margin="100,10,0,0" TextWrapping="Wrap" Text="13" VerticalAlignment="Top" Width="120"/>
 
 
-                <Label Grid.Row="1" Grid.Column="1" Content="Number 3:" HorizontalAlignment="Left" Margin="0,50,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
-                <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbxNum3" HorizontalAlignment="Left" Height="23" Margin="100,50,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="120"/>
+                <Label Grid.Row="1" Grid.Column="1" Content="Number 3:" HorizontalAlignment="Left" Margin="0,50,0,0" VerticalAlignment="Top" Width="70" Height="25"/>
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbxNum3" HorizontalAlignment="Left" Height="25" Margin="100,50,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="120"/>
 
                 <Label Grid.Row="0" Grid.Column="2" Content="List of Tickets" HorizontalAlignment="Left" Margin="35,25,0,0" VerticalAlignment="Top"/>
                 <ListBox Grid.RowSpan="2" Grid.Column="2" x:Name="lbxTickets" HorizontalAlignment="Left" Height="288" Margin="35,70,0,0" VerticalAlignment="Top" Width="184"/>
