@@ -141,7 +141,7 @@ namespace Individual_Project
             num = tbxNum2.Text;
             int num2 = Convert.ToInt32(num);
 
-            num = tbxNum1.Text;
+            num = tbxNum3.Text;
             int num3 = Convert.ToInt32(num);
 
             Entry E1 = new Entry(num1, num2, num3, DateTime.Now);

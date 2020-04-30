@@ -11,22 +11,39 @@
 
             <Grid>
 
-                <TextBox x:Name="tbxFirst" HorizontalAlignment="Left" Height="23" Margin="165,68,0,0" TextWrapping="Wrap" Text="Paul" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tbxLast" HorizontalAlignment="Left" Height="24" Margin="165,111,0,0" TextWrapping="Wrap" Text="Sherlock" VerticalAlignment="Top" Width="120"/>
-                <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="94,352,0,0" VerticalAlignment="Top" Width="74" Click="btnSubmit_Click"/>
-                <Label Content="First Name:" HorizontalAlignment="Left" Margin="34,68,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
-                <Label Content="Last Name:" HorizontalAlignment="Left" Margin="34,111,0,0" VerticalAlignment="Top" Height="24" Width="67"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
 
-                <TextBox x:Name="tbxTelephone" HorizontalAlignment="Left" Height="23" Margin="165,158,0,0" TextWrapping="Wrap" Text="0835469032" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tbxStreet" HorizontalAlignment="Left" Height="23" Margin="165,193,0,0" TextWrapping="Wrap" Text="Fake Street" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tbxTown" HorizontalAlignment="Left" Height="23" Margin="165,232,0,0" TextWrapping="Wrap" Text="Ballymote" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tbxCounty" HorizontalAlignment="Left" Height="23" Margin="165,277,0,0" TextWrapping="Wrap" Text="Sligo" VerticalAlignment="Top" Width="120"/>
-                <Label Content="Phone No" HorizontalAlignment="Left" Margin="34,158,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
-                <Label Content="Street" HorizontalAlignment="Left" Margin="34,193,0,0" VerticalAlignment="Top" Height="23" Width="63"/>
-                <Label Content="Town" HorizontalAlignment="Left" Margin="34,232,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
-                <Label Content="County" HorizontalAlignment="Left" Margin="34,277,0,0" VerticalAlignment="Top" Height="33" Width="67"/>
-                <Label Content="Add User" HorizontalAlignment="Left" Margin="34,19,0,0" VerticalAlignment="Top"/>
+                <Label Grid.Row="0" Content="Add User" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top"/>
 
+                <Label Grid.Row="1" Content="First Name:" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="23" Width="70"/>
+                <TextBox Grid.Row="1" x:Name="tbxFirst" HorizontalAlignment="Left" Height="23" Margin="165,15,0,0" TextWrapping="Wrap" Text="Paul" VerticalAlignment="Top" Width="120"/>
+
+                <Label Grid.Row="2" Content="Last Name:" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="24" Width="67"/>
+                <TextBox Grid.Row="2" x:Name="tbxLast" HorizontalAlignment="Left" Height="24" Margin="165,15,0,0" TextWrapping="Wrap" Text="Sherlock" VerticalAlignment="Top" Width="120"/>
+
+                <Label Grid.Row="3" Content="Phone No" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
+                <TextBox Grid.Row="3" x:Name="tbxTelephone" HorizontalAlignment="Left" Height="23" Margin="165,15,0,0" TextWrapping="Wrap" Text="0835469032" VerticalAlignment="Top" Width="120"/>
+
+                <Label Grid.Row="4" Content="Street" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="23" Width="63"/>
+                <TextBox Grid.Row="4" x:Name="tbxStreet" HorizontalAlignment="Left" Height="23" Margin="165,15,0,0" TextWrapping="Wrap" Text="Fake Street" VerticalAlignment="Top" Width="120"/>
+
+                <Label Grid.Row="5" Content="Town" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
+                <TextBox Grid.Row="5" x:Name="tbxTown" HorizontalAlignment="Left" Height="23" Margin="165,15,0,0" TextWrapping="Wrap" Text="Ballymote" VerticalAlignment="Top" Width="120"/>
+
+                <Label Grid.Row="6" Content="County" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="33" Width="67"/>
+                <TextBox Grid.Row="6" x:Name="tbxCounty" HorizontalAlignment="Left" Height="23" Margin="165,15,0,0" TextWrapping="Wrap" Text="Sligo" VerticalAlignment="Top" Width="120"/>
+
+                <Button Grid.Row="7" x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="165,15,0,0" VerticalAlignment="Top" Width="74" Click="btnSubmit_Click"/>
+                
                 <!--<TextBlock x:Name="tblkWinNum1" HorizontalAlignment="Left" Margin="531,68,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="39" FontSize="24"/>
                 <TextBlock x:Name="tblkWinNum2" HorizontalAlignment="Left" Margin="617,68,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Height="39" FontSize="24"/>
                 <TextBlock x:Name="tblkWinNum3" HorizontalAlignment="Left" Margin="695,68,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Height="39" FontSize="24"/>
@@ -40,41 +57,76 @@
 
         <TabItem Name="addTicket" Header="Add Ticket" Width="80">
             <Grid>
-                <ComboBox x:Name="combxUser" HorizontalAlignment="Left" Margin="35,77,0,0" VerticalAlignment="Top" Width="120"/>
-                <Label Content="User Select" HorizontalAlignment="Left" Margin="35,29,0,0" VerticalAlignment="Top"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="6*"/>
+                </Grid.RowDefinitions>
 
-                <Label Content="Number 1:" HorizontalAlignment="Left" Margin="214,76,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
-                <Label Content="Number 2:" HorizontalAlignment="Left" Margin="214,121,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
-                <Label Content="Number 3:" HorizontalAlignment="Left" Margin="214,162,0,0" VerticalAlignment="Top" Width="67" Height="23" RenderTransformOrigin="0.571,-0.435"/>
-                <TextBox x:Name="tbxNum1" HorizontalAlignment="Left" Height="23" Margin="353,76,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="tbxNum2" HorizontalAlignment="Left" Height="23" Margin="353,121,0,0" TextWrapping="Wrap" Text="13" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.467,0.435"/>
-                <TextBox x:Name="tbxNum3" HorizontalAlignment="Left" Height="23" Margin="353,162,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="120"/>
-                <ListBox x:Name="lbxTickets" HorizontalAlignment="Left" Height="288" Margin="511,76,0,0" VerticalAlignment="Top" Width="184"/>
-                <Label Content="List of Tickets" HorizontalAlignment="Left" Margin="511,37,0,0" VerticalAlignment="Top"/>
-                <Button x:Name="btnNums" Content="Submit Numbers" HorizontalAlignment="Left" Margin="318,245,0,0" VerticalAlignment="Top" Width="102" Click="btnNums_Click"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Row="0" Grid.Column="0" Content="User Select" HorizontalAlignment="Left" Margin="35,25,0,0" VerticalAlignment="Top"/>
+                <ComboBox Grid.Row="0" Grid.Column="0" x:Name="combxUser" HorizontalAlignment="Left" Margin="35,70,0,0" VerticalAlignment="Top" Width="120"/>
+
+                <Label Grid.Row="0" Grid.Column="1" Content="Pick Your Numbers" Margin="0,25,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Height="25"/>
+
+                <Label Grid.Row="0" Grid.Column="1"  Content="Number 1:" HorizontalAlignment="Left" Margin="0,70,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
+                <TextBox Grid.Row="0" Grid.Column="1" x:Name="tbxNum1" HorizontalAlignment="Left" Height="23" Margin="100,70,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="120"/>
+
+
+                <Label Grid.Row="1" Grid.Column="1" Content="Number 2:" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbxNum2" HorizontalAlignment="Left" Height="23" Margin="100,10,0,0" TextWrapping="Wrap" Text="13" VerticalAlignment="Top" Width="120"/>
+
+
+                <Label Grid.Row="1" Grid.Column="1" Content="Number 3:" HorizontalAlignment="Left" Margin="0,50,0,0" VerticalAlignment="Top" Width="67" Height="23"/>
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbxNum3" HorizontalAlignment="Left" Height="23" Margin="100,50,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="120"/>
+
+                <Label Grid.Row="0" Grid.Column="2" Content="List of Tickets" HorizontalAlignment="Left" Margin="35,25,0,0" VerticalAlignment="Top"/>
+                <ListBox Grid.RowSpan="2" Grid.Column="2" x:Name="lbxTickets" HorizontalAlignment="Left" Height="288" Margin="35,70,0,0" VerticalAlignment="Top" Width="184"/>
+
+                <Button Grid.Row="1" Grid.Column="1" x:Name="btnNums" Content="Submit Numbers" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top" Width="102" Click="btnNums_Click"/>
 
             </Grid>
         </TabItem>
 
         <TabItem Name="winners" Header="Winners" Width="80">
             <Grid>
-                <TextBlock x:Name="tblkWinNum1" HorizontalAlignment="Left" Margin="312,124,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="39" FontSize="24"/>
-                <TextBlock x:Name="tblkWinNum2" HorizontalAlignment="Left" Margin="366,124,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Height="39" FontSize="24"/>
-                <TextBlock x:Name="tblkWinNum3" HorizontalAlignment="Left" Margin="418,124,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Height="39" FontSize="24"/>
-                <Label Content="Winning Numbers" HorizontalAlignment="Left" Margin="325,68,0,0" VerticalAlignment="Top"/>
-                <Label Content="Winners" HorizontalAlignment="Left" Margin="97,37,0,0" VerticalAlignment="Top"/>
-                <ListBox x:Name="lbxWinners" HorizontalAlignment="Left" Height="293" Margin="24,68,0,0" VerticalAlignment="Top" Width="213"/>
-                <Button x:Name="btnWinners" Content="Show Winners" HorizontalAlignment="Left" Margin="325,216,0,0" VerticalAlignment="Top" Width="92" Click="btnWinners_Click"/>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Content="Winning Numbers" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top"/>
+
+                <TextBlock Grid.Column="0"  x:Name="tblkWinNum1" HorizontalAlignment="Center" Margin="-100,100,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="40" FontSize="24"/>
+                <TextBlock Grid.Column="0"  x:Name="tblkWinNum2" HorizontalAlignment="Center" Margin="0,100,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Height="40" FontSize="24"/>
+                <TextBlock Grid.Column="0"  x:Name="tblkWinNum3" HorizontalAlignment="Center" Margin="100,100,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Height="40" FontSize="24"/>
+                <Button Grid.Column="0" x:Name="btnWinners" Content="Show Winners" HorizontalAlignment="Center" Margin="0,175,0,0" VerticalAlignment="Top" Width="90" Click="btnWinners_Click"/>
+
+                <Label Grid.Column="1"  Content="Winners" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top"/>
+                <ListBox Grid.Column="1" x:Name="lbxWinners" HorizontalAlignment="Center" Height="293" Margin="0,70,0,0" VerticalAlignment="Top" Width="213"/>
+                
 
             </Grid>
         </TabItem>
 
         <TabItem Name="details" Header="User Details" Width="80">
             <Grid>
-                <ListBox x:Name="lbxEntries" HorizontalAlignment="Left" Height="270" Margin="62,68,0,0" VerticalAlignment="Top" Width="157" SelectionChanged="LbxEntries_SelectionChanged"/>
-                <TextBlock x:Name="txtblkDetails" HorizontalAlignment="Left" Height="270" Margin="340,68,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="359"/>
-                <Label Content="Details" HorizontalAlignment="Left" Margin="340,24,0,0" VerticalAlignment="Top"/>
-                <Label Content="Entries" HorizontalAlignment="Left" Margin="62,24,0,0" VerticalAlignment="Top"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Column="0" Content="Entries" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top"/>
+                <ListBox Grid.Column="0" x:Name="lbxEntries" HorizontalAlignment="Center" Height="270" Margin="0,70,0,0" VerticalAlignment="Top" Width="250" SelectionChanged="LbxEntries_SelectionChanged"/>
+
+                <Label Grid.Column="1" Content="Details" HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top"/>
+                <TextBlock Grid.Column="1" x:Name="txtblkDetails" HorizontalAlignment="Center" Height="270" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
             </Grid>
         </TabItem>
 
