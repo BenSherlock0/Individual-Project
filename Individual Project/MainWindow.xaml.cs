@@ -25,6 +25,8 @@ namespace Individual_Project
         ObservableCollection<Entry> Entries = new ObservableCollection<Entry>();
         ObservableCollection<Entry> Winners = new ObservableCollection<Entry>();
 
+        //Tried make a database but the it wasn't working for me and kept freezing
+
         Random rng = new Random();
         public MainWindow()
         {
