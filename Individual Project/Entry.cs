@@ -12,6 +12,7 @@ namespace Individual_Project
         public int Num2 { get; set; }
         public int Num3 { get; set; }
         public DateTime Date { get; set; }
+        public bool Vaild { get; set; }
 
         //public int[] Numbers { get; set; }
 
@@ -29,6 +30,17 @@ namespace Individual_Project
             return $"{Num1}:{Num2}:{Num3}   {Date.ToShortDateString()}";
         }
 
+        public void findCopy(int num1, int num2, int num3)
+        {
+             Vaild = false;
+
+            if (num1 == num2 || num1 == num3 || num3 == num2)
+            {
+                Vaild = true;
+            }
+
+
+        }
 
     }
 }

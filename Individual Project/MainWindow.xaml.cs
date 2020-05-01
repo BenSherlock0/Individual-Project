@@ -133,11 +133,8 @@ namespace Individual_Project
                 num = tbxNum3.Text;
                 int num3 = Convert.ToInt32(num);
 
+                copy = findCopy(num1, num2, num3);
 
-                if (num1 == num2 || num1 == num3 || num3 == num2)
-                {
-                    copy = true;
-                }
 
                 if (copy == false)
                 {
@@ -155,6 +152,18 @@ namespace Individual_Project
             }
             
 
+        }
+
+        public static bool findCopy(int num1,int num2,int num3)
+        {
+            bool copy = false;
+
+            if (num1 == num2 || num1 == num3 || num3 == num2)
+            {
+                copy = true;
+            }
+
+            return copy;
         }
     }
 }

@@ -22,28 +22,35 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
                 <Label Grid.Row="0" Content="Add User" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top"/>
 
-                <Label Grid.Row="1" Content="First Name:" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="23" Width="70"/>
+                <Label Grid.Row="1" Content="First Name:" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="23" Width="75"/>
                 <TextBox Grid.Row="1" x:Name="tbxFirst" HorizontalAlignment="Left" Height="23" Margin="165,15,0,0" TextWrapping="Wrap" Text="Paul" VerticalAlignment="Top" Width="120"/>
 
-                <Label Grid.Row="2" Content="Last Name:" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="24" Width="67"/>
+                <Label Grid.Row="2" Content="Last Name:" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="24" Width="75"/>
                 <TextBox Grid.Row="2" x:Name="tbxLast" HorizontalAlignment="Left" Height="24" Margin="165,15,0,0" TextWrapping="Wrap" Text="Sherlock" VerticalAlignment="Top" Width="120"/>
 
-                <Label Grid.Row="3" Content="Phone No" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
+                <Label Grid.Row="3" Content="Phone No" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="23" Width="75"/>
                 <TextBox Grid.Row="3" x:Name="tbxTelephone" HorizontalAlignment="Left" Height="23" Margin="165,15,0,0" TextWrapping="Wrap" Text="0835469032" VerticalAlignment="Top" Width="120"/>
 
-                <Label Grid.Row="4" Content="Street" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="23" Width="63"/>
+                <Label Grid.Row="4" Content="Street" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="23" Width="75"/>
                 <TextBox Grid.Row="4" x:Name="tbxStreet" HorizontalAlignment="Left" Height="23" Margin="165,15,0,0" TextWrapping="Wrap" Text="Fake Street" VerticalAlignment="Top" Width="120"/>
 
-                <Label Grid.Row="5" Content="Town" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
+                <Label Grid.Row="5" Content="Town" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="23" Width="75"/>
                 <TextBox Grid.Row="5" x:Name="tbxTown" HorizontalAlignment="Left" Height="23" Margin="165,15,0,0" TextWrapping="Wrap" Text="Ballymote" VerticalAlignment="Top" Width="120"/>
 
-                <Label Grid.Row="6" Content="County" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="33" Width="67"/>
+                <Label Grid.Row="6" Content="County" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Height="33" Width="75"/>
                 <TextBox Grid.Row="6" x:Name="tbxCounty" HorizontalAlignment="Left" Height="23" Margin="165,15,0,0" TextWrapping="Wrap" Text="Sligo" VerticalAlignment="Top" Width="120"/>
 
                 <Button Grid.Row="7" x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="165,15,0,0" VerticalAlignment="Top" Width="74" Click="btnSubmit_Click"/>
-                
+
+                <Image Grid.RowSpan="8" Grid.Column="1"  Source="/images/list.png" Height="300" Width="150" HorizontalAlignment="Center" Margin="0,0,0,0"></Image>
+
 
             </Grid>
         </TabItem>
@@ -64,6 +71,8 @@
                 
                 <Label Grid.Row="0" Grid.Column="0" Content="User Select" HorizontalAlignment="Left" Margin="35,25,0,0" VerticalAlignment="Top"/>
                 <ComboBox Grid.Row="0" Grid.Column="0" x:Name="combxUser" HorizontalAlignment="Left" Margin="35,70,0,0" VerticalAlignment="Top" Width="120"/>
+
+                <Image Grid.Row="1" Grid.Column="0" Name="Lotto" Source="/images/lotto.jpg" Height="250" Width="150" HorizontalAlignment="Center" Margin="0,0,0,0"></Image>
 
                 <Label Grid.Row="0" Grid.Column="1" Content="Pick Your Numbers" Margin="0,25,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Height="25"/>
 
@@ -101,9 +110,7 @@
                 <TextBlock Grid.Column="0"  x:Name="tblkWinNum3" HorizontalAlignment="Center" Margin="100,100,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Height="40" FontSize="24"/>
                 <Button Grid.Column="0" x:Name="btnWinners" Content="Show Winners" HorizontalAlignment="Center" Margin="0,175,0,0" VerticalAlignment="Top" Width="90" Click="btnWinners_Click"/>
 
-                <!--<Image Grid.Column="0" Height="150" Width="150" HorizontalAlignment="Center" Margin="-125,200,0,0">
-                    <Image.Source>images/wine</Image.Source> Can't get images to work
-                </Image>-->
+                <Image Grid.Column="0" Source="/images/wine.jpg" Height="150" Width="150" HorizontalAlignment="Center" Margin="0,200,0,0"></Image>
 
                 <Label Grid.Column="1"  Content="Winners" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top"/>
                 <ListBox Grid.Column="1" x:Name="lbxWinners" HorizontalAlignment="Center" Height="293" Margin="0,70,0,0" VerticalAlignment="Top" Width="213"/>
@@ -120,7 +127,8 @@
                 </Grid.ColumnDefinitions>
                 
                 <Label Grid.Column="0" Content="Entries" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top"/>
-                <ListBox Grid.Column="0" x:Name="lbxEntries" HorizontalAlignment="Center" Height="270" Margin="0,70,0,0" VerticalAlignment="Top" Width="250" SelectionChanged="LbxEntries_SelectionChanged"/>
+                <ListBox Grid.Column="0" x:Name="lbxEntries" HorizontalAlignment="Center" Height="200" Margin="0,70,0,0" VerticalAlignment="Top" Width="250" SelectionChanged="LbxEntries_SelectionChanged"/>
+                <Image Grid.Column="0" Source="/images/book.png" Height="150" Width="150" HorizontalAlignment="Center" Margin="0,250,0,0"></Image>
 
                 <Label Grid.Column="1" Content="Details" HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top"/>
                 <TextBlock Grid.Column="1" x:Name="txtblkDetails" HorizontalAlignment="Center" Height="270" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
