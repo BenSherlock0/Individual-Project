@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,9 @@ namespace Individual_Project
 {
     public class User
     {
+        public static int Id = 1;
+
+        public int UserID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNo { get; set; }
@@ -15,7 +19,7 @@ namespace Individual_Project
         public string Town { get; set; }
         public string County { get; set; }
 
-        public Entry UserEntry { get; set; }
+        public virtual List<Entry> UserEntry { get; set; }
 
 
         //public int Num1 { get; set; }
@@ -26,15 +30,6 @@ namespace Individual_Project
         {
 
         }
-        public User(string fname,string lname, int num1, int num2, int num3)
-        {
-            FirstName = fname;
-            LastName = lname;
-            //Num1 = num1;
-            //Num2 = num2;
-            //Num3 = num3;
-        }
-
         public User(string fname, string lname, string phoneNo ,string street,string town,string county,int num1, int num2, int num3)
         {
             FirstName = fname;
@@ -44,13 +39,6 @@ namespace Individual_Project
             Town = town;
             County = county;
 
-            UserEntry.Num1 = num1;
-            UserEntry.Num2 = num2;
-            UserEntry.Num3 = num3;
-
-            //Num1 = num1;
-            //Num2 = num2;
-            //Num3 = num3;
         }
 
         public User(string fname, string lname, string phoneNo, string street, string town, string county)
@@ -62,19 +50,18 @@ namespace Individual_Project
             Town = town;
             County = county;
 
-            //UserEntry.Num1 = num1;
-            //UserEntry.Num2 = num2;
-            //UserEntry.Num3 = num3;
 
-            //Num1 = num1;
-            //Num2 = num2;
-            //Num3 = num3;
         }
 
         public override string ToString()
         {
-            //return $"{FirstName} {LastName} {UserEntry.Num1}:{UserEntry.Num2}:{UserEntry.Num3}";
             return $"{FirstName} {LastName}";
         }
+    }
+    public class UserData : DbContext
+    {
+        public UserData() : base("User Info") { }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Entry> Entries { get; set; }
     }
 }

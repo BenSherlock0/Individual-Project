@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Individual Project", "Indiv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "btnNums_Click.Test", "btnNums_Click.Test\btnNums_Click.Test.csproj", "{92CD7787-4E01-40E8-B5D8-87AF680459BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManagement", "DataManagement\DataManagement.csproj", "{1799209C-363F-4B15-A5CE-5C2CEA3B1B6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{92CD7787-4E01-40E8-B5D8-87AF680459BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92CD7787-4E01-40E8-B5D8-87AF680459BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92CD7787-4E01-40E8-B5D8-87AF680459BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1799209C-363F-4B15-A5CE-5C2CEA3B1B6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1799209C-363F-4B15-A5CE-5C2CEA3B1B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1799209C-363F-4B15-A5CE-5C2CEA3B1B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1799209C-363F-4B15-A5CE-5C2CEA3B1B6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
